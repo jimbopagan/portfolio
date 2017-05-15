@@ -52,9 +52,9 @@
         </div>
     </div>
 
-    <div id='about' class='container-fluid'>
+    <div id='aboutContainer' class='container-fluid'>
         <div class='row'>
-            <div class='col-xs-12 col-lg-12'>
+            <div id='about' class='col-xs-12 col-lg-12'>
                 <h1>About </h1>
                 <a href='#navFirst'>Back</a>
                 <a href='#skills'>Next</a>
@@ -63,8 +63,8 @@
     </div>
     <div id='skillsContainer' class='container-fluid'>
         <div id='skillRow' class='row'>
-            <div id='skills' class='col-xs-12 col-lg-8 ' align="center">
-                <h1>skills </h1>
+            <div id='skills' class='col-xs-12 col-md-12 col-lg-12'>
+                <h1>Skills </h1>
                 <a href='#about'>Back</a>
                 <a href='#project'>Next</a>
                 <ul class="skillset">
@@ -88,35 +88,65 @@
     </div>
     <div id='projectContainer' class='container-fluid'>
         <div id='projectRow' class='row'>
-            <div id='project' class='col-xs-12 col-lg-12'>
-                <a href='#skills'>Back</a>
+            <div id='project' class='col-xs-9 col-md-6 col-lg-6'>
+                <a href='#skills'>Back To Skills</a>
                 <a href='#contact'>Next</a>
-                <h1>Project</h1>
-                <ul class="skillset">
-                    <i class="devicon-html5-plain-wordmark"></i>
-                    <i class="devicon-css3-plain"></i>
-                    <i class="devicon-bootstrap-plain colored"></i>
-                    <i class="devicon-javascript-plain colored"></i>
-                    <i class="devicon-jquery-plain-wordmark"></i>
-                    <i class="devicon-angularjs-plain colored"></i>
-                    <i class="devicon-nodejs-plain colored"></i>
-                    <i class="devicon-mongodb-plain-wordmark colored"></i>
-                    <i class="devicon-git-plain"></i>
-                    <i class="devicon-github-plain-wordmark"></i>
-                    <i class="devicon-oracle-original"></i>
-                    <i class="devicon-mysql-plain"></i>
-                    <img class="icon icons8-Slack" width="48" height="48" src="data:image/png;base64,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">
-                    <i class="devicon-trello-plain"></i>
-                </ul>
+                <h1>Projects</h1>
+                <div class="project">
+                    <div>
+                        <h4>Sailing App</h4>
+                    </div>
+                    <div>
+                        <p>This is a full MEAN stack application. Users are allowed to sign in and created a profile. It allows signed in users to check the wheater at the location of their boat launch, stamps launch time and coordinates. Users can also input their favorite fishing holes. </p>
+                        <div>
+                            <center><img id='project1' src='img/Screen%20Shot%202017-05-15%20at%2010.12.07%20AM.png'></center><a href='https://github.com/vschool-slc-february/sailing-app'>Link to project in gihub</a></div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div>
+                        <h4>Pet Finder</h4>
+                    </div>
+                    <div>
+                        <p>This is a full MEAN stack application. Users are allowed to sign in and created a profile. It allows users to create an online poster of their lost pet and see other lost pet and uses query parameters to search by county.</p>
+                        <div>
+                            <center><img id='project1' src='img/Screen%20Shot%202017-05-15%20at%2012.03.52%20PM.png'></center><a href='https://github.com/jimbopagan/pet-finder'>Link to project in gihub</a></div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div>
+                        <h4>Grow Share</h4>
+                    </div>
+                    <div>
+                        <p>This is a full MEAN stack application. It stores a users garden and allows other users to see each others garden and share or trade crops. I got inspired to make this becasue I garden as a hobby andsometimes I have too many vegetables and dont know what to do with them. This was the first MEAN stack and I need to add lessons learned to make this better. But I am really proud of this idea. I think its great to have neighbors growing crops and sharing. And I am very proud of this project because I had this idea since before starting boot camp.</p>
+                        <div>
+                            <center><img id='project1' src='img/Screen%20Shot%202017-05-15%20at%2012.06.11%20PM.png'></center><a href='https://github.com/jimbopagan/vegetables'>Link to project in gihub</a></div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div>
+                        <h4>Personal Angulatr Site</h4>
+                    </div>
+                    <div>
+                        <p>This isa n angular app that uses the Star Wars Api via CRUD methods to get various Star Wars ship to face each other in a galactic race. I know jsut what you have always wanted! It also enters differen Star Wars charactes randomly into a galactic pie eating contest. It was the first angular project and I like it becaseu it has to do with Star Wars.</p>
+                        <div>
+                            <center><img id='project1' src='img/Screen%20Shot%202017-05-15%20at%2012.10.44%20PM.png'></center><a href='https://github.com/jimbopagan/vschool-assignments/tree/master/exercises/personal-angular-site'>Link to project in gihub</a></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <div id='contact' class='container-fluid'>
         <div id='contactRow' class='row'>
             <div class='col-xs-12 col-lg-12'>
-                <h1>contact</h1>
-                <a href='#project'>Back</a>
-                <a href='#navFirst'>Top</a>
+                <a href='#project'>Back To Projects</a>
+                <br><a href='#navFirst'>Back To Top</a>
+                <h3>Jaime "Jimmy" Pagan</h3>
+                <h4>Email: jimbopagan@yahoo.com</h4>
+                <h4>Tel: 425-923-9518</h4>
+                <ul>
+                    <li class='social'><a href="https://github.com/jimbopagan"><i class="fa fa-lg fa-github social"></i></a></li>
+                    <li class='social'><a href="https://www.linkedin.com/in/jaime-pagan-in/"><i class="fa fa-lg fa-linkedin social"></i></a></li>
+                </ul>
             </div>
         </div>
     </div>
