@@ -2,55 +2,126 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <div>
-    <div>
-      <div>
-        <div class="video-container" class='container-fluid'>
-          <video id="myVideo" class="hero-video" autoplay="" loop="" muted="">
-                    <source src='img/698800059.mp4' type="video/webm">
-                </video>
-          <div class="hero-caption">
-            <div class="hero-caption-inner">
-              <center>
-                <h1 class='intro'>Jimmy Pagan</h1>
-                <h2 class='intro'>Full Stack Developer</h2>
-              </center>
-              <hr class='intro' />
-              <ul>
-                <li><a href="https://github.com/jimbopagan"><span class="fa fa-lg fa-github"></a></span>
-                </li>
-                <li><a href="https://www.linkedin.com/in/jaime-pagan-in/"><span class="fa fa-lg fa-linkedin"></span></a></li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-      <div id='section1' class='col-xs-12 col-lg-12'>
-        <h1>Hi 1</h1>
-      </div>
-      <div id='section2' class='col-xs-12 col-lg-12'>
-        <h1>Hi 2</h1>
-      </div>
-      <div id='section3' class='col-xs-12 col-lg-12'>
-        <h1>Hi 3</h1>
-      </div>
-      <div id='section4' class='col-xs-12 col-lg-12'>
-        <h1>Hi 4</h1>
-      </div>
+    <div id='navFirst' class='container-fluid'>
+        <nav id='navbar' class="navbar navbar-inverse bg-inverse">
+            <ul>
+                <li class='navLink'><a href='#about'>About</a></li>
+                <li class='navLink'><a href='#skills'>Skills</a></li>
+                <li class='navLink'><a href='#project'>Projects</a></li>
+                <li class='navLink'><a href='#contact'>Contact</a></li>
+            </ul>
+        </nav>
     </div>
-  </div>
-  <script src="app.js"></script>
+    <div id='vidContainer' class="container-fluid">
+        <div class="row" id='vidRow'>
+            <div id='vidCol' class='col-xs-12 col-lg-12'>
+                <div id='video'>
+                    <video id='myVideo' class="hero-video" autoplay="" loop="" muted="">
+            <source id='vidSrc' src='img/698800059.mp4' type="video/webm"></video>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="title">
+            <div class='col-xs-12 col-lg-12'>
+                <center>
+                    <h1 class='title'>Jimmy Pagan</h1>
+                </center>
+                <center>
+                    <h1 class="intro title">Full Stack Developer</h1>
+                </center>
+                <hr class="intro-divider title">
+            </div>
+        </div>
+        <div class='row' id='socialRow'>
+            <div class='col-xs-12 col-lg-12'>
+                <ul>
+                    <li class='social'><a href="https://github.com/jimbopagan"><i class="fa fa-lg fa-github social"></i></a></li>
+                    <li class='social'><a href="https://www.linkedin.com/in/jaime-pagan-in/"><i class="fa fa-lg fa-linkedin social"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id='about' class='container-fluid'>
+        <div class='row'>
+            <div class='col-xs-12 col-lg-12'>
+                <h1>About </h1>
+                <a href='#navFirst'>Back</a>
+                <a href='#skills'>Next</a>
+            </div>
+        </div>
+    </div>
+    <div id='skillsContainer' class='container-fluid'>
+        <div id='skillRow' class='row'>
+            <div id='skills' class='col-xs-12 col-lg-8 ' align="center">
+                <h1>skills </h1>
+                <a href='#about'>Back</a>
+                <a href='#project'>Next</a>
+                <ul class="skillset">
+                    <i class="devicon-html5-plain-wordmark"></i>
+                    <i class="devicon-css3-plain"></i>
+                    <i class="devicon-bootstrap-plain colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                    <i class="devicon-jquery-plain-wordmark"></i>
+                    <i class="devicon-angularjs-plain colored"></i>
+                    <i class="devicon-nodejs-plain colored"></i>
+                    <i class="devicon-mongodb-plain-wordmark colored"></i>
+                    <i class="devicon-git-plain"></i>
+                    <i class="devicon-github-plain-wordmark"></i>
+                    <i class="devicon-oracle-original"></i>
+                    <i class="devicon-mysql-plain"></i>
+                    <img class="icon icons8-Slack" width="48" height="48" src="data:image/png;base64,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">
+                    <i class="devicon-trello-plain"></i>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id='projectContainer' class='container-fluid'>
+        <div id='projectRow' class='row'>
+            <div id='project' class='col-xs-12 col-lg-12'>
+                <a href='#skills'>Back</a>
+                <a href='#contact'>Next</a>
+                <h1>Project</h1>
+                <ul class="skillset">
+                    <i class="devicon-html5-plain-wordmark"></i>
+                    <i class="devicon-css3-plain"></i>
+                    <i class="devicon-bootstrap-plain colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                    <i class="devicon-jquery-plain-wordmark"></i>
+                    <i class="devicon-angularjs-plain colored"></i>
+                    <i class="devicon-nodejs-plain colored"></i>
+                    <i class="devicon-mongodb-plain-wordmark colored"></i>
+                    <i class="devicon-git-plain"></i>
+                    <i class="devicon-github-plain-wordmark"></i>
+                    <i class="devicon-oracle-original"></i>
+                    <i class="devicon-mysql-plain"></i>
+                    <img class="icon icons8-Slack" width="48" height="48" src="data:image/png;base64,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">
+                    <i class="devicon-trello-plain"></i>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id='contact' class='container-fluid'>
+        <div id='contactRow' class='row'>
+            <div class='col-xs-12 col-lg-12'>
+                <h1>contact</h1>
+                <a href='#project'>Back</a>
+                <a href='#navFirst'>Top</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
